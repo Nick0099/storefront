@@ -34,10 +34,10 @@ class Customer(models.Model):
         (MEMBERSHIP_SILVER, 'Silver'),
         (MEMBERSHIP_GOLD, 'Gold'),
     ]
-    first_name = models.CharField(max_length = 10)
-    last_name = models.CharField(max_length = 10)
-    email = models.CharField(max_length = 100, unique = True)
-    phone = models.CharField(max_length = 10)
+    first_name = models.CharField(max_length = 255)
+    last_name = models.CharField(max_length = 255)
+    email = models.CharField(max_length = 255, unique = True)
+    phone = models.CharField(max_length = 255)
     birth_date = models.DateField(null = True)
     membership = models.CharField(max_length = 1, choices = MEMBERSHIP_CHOICE, default = 'N')
     class Meta:
