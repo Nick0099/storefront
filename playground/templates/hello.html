@@ -9,12 +9,14 @@
     <h1> 
         Hello {{ name}}
     </h1>
+    {{ result}}
+    <!-- 
     <ul>
-        {% for order in orders %}
-            <li>{{ order.id }} - {{ order.customer.first_name }}</li>
+        {% for key, value in result.items %}
+            <li>{{ key }}: {{ value }}</li>
         {% endfor %}
     </ul>
-
+-->
     
 </body>
 </html>
