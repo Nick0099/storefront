@@ -13,6 +13,8 @@ class TaggedItemManager(models.Manager):
             object_id=obj_id)
 class Tag(models.Model):
     label = models.CharField(max_length = 255)
+    def __str__(self):
+        return self.label
 
 class TaggedItem(models.Model):
     objects = TaggedItemManager()
